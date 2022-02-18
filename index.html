@@ -1,0 +1,1254 @@
+<!DOCTYPE HTML>
+  <html lang="">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="hero.1.0.0.js"></script>
+    <script src="fusion.1.0.0.js"></script>
+    </head>
+  <body>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+  body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-element {
+    position: absolute;
+  }
+  .fusion--player {
+    background-color: #fff;
+  }
+  
+  
+        #guid_e3f1e73e_19d0_46a9_8d95_cff281735986 {
+  position: absolute;
+  width: 375px;
+  height: 800px;
+  background-color: #fff;
+}
+#guid_403002c6_292c_4c3a_a4e0_96c166975597 {
+  width: 375px;
+  height: 800px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  background-color: #fff;
+  border: 1px solid #020000;
+}
+#guid_53210788_1f9c_4d8d_92cb_c26b6962d05e {
+  width: 375px;
+  height: 800px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_25691aae_ed44_4fad_af5a_69e7f8dc7f99 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 6, 26);
+}
+#guid_6f523643_e9a0_495e_83ba_04c904d63a07 {
+  width: 144px;
+  height: 50px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 120, 645);
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+#guid_48620773_8fe0_4c26_9a35_f9d09cfd8c34 {
+  width: 91px;
+  font-family: SF Pro Display;
+  font-style: italic;
+  font-size: 20px;
+  color: #0e0e0d;
+  text-align: center;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 144, 658);
+}
+#guid_0a740a9b_1c2f_43dd_86c4_0c4a7f5e4696 {
+  width: 348px;
+  height: 51px;
+  font-family: SF Pro Display;
+  font-style: italic;
+  font-size: 20px;
+  color: #0e0e0d;
+  text-align: center;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 10, 233);
+}
+#guid_64039eff_4466_4678_b5e4_b36ffaf757e8 {
+  width: 46.413px;
+  height: 50px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 252.79333543777466, 671);
+  pointer-events: none;
+}
+#guid_9b439e8d_4512_4725_b375_7c085482d399 {
+  position: absolute;
+  width: 375px;
+  height: 800px;
+  background-color: #fff;
+}
+#guid_da1a4fed_c37d_4b7b_a28a_d68bc70dfe0e {
+  width: 375px;
+  height: 800px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  background-color: #fff;
+}
+#guid_a46c9549_a0d7_4893_abba_d2f1d2833a2c {
+  width: 335px;
+  height: 761px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 20, 20);
+}
+#guid_ff7f00cd_d80b_43ff_a6fb_91e338851633 {
+  width: 65px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 61, 248);
+}
+#guid_4fc269b8_5b17_48ec_86c5_ecc09f452c33 {
+  width: 63px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 153, 248);
+}
+#guid_b1d0d34a_8677_4565_8c5c_c3d5326e2245 {
+  width: 66px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 243, 248);
+}
+#guid_babfccbb_5f06_4d9a_b677_cdbb9a4928bb {
+  width: 60px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 66, 369);
+}
+#guid_9c682ce4_60a1_477b_b06d_3e019ac040d7 {
+  width: 62px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 159, 369);
+}
+#guid_ce743ed7_7701_4c4f_9684_2e3795c1f68e {
+  width: 65px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 61, 512);
+}
+#guid_4c6526ec_4c8b_47fb_9401_e260e704e483 {
+  width: 63px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 156, 512);
+}
+#guid_7a7b4c69_d3f0_4289_a7f9_c0dc1a06f565 {
+  width: 62px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 250, 369);
+}
+#guid_3c19e0b9_86cf_4bda_aeb1_b2b78721b3c9 {
+  position: absolute;
+  width: 375px;
+  height: 800px;
+  background-color: #fff;
+}
+#guid_b76e09f6_6d98_4692_acd1_5f19ef8c0998 {
+  width: 446px;
+  height: 917px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -23, -58);
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+#guid_2b121295_c32e_4683_9bae_7e8394832a89 {
+  width: 375px;
+  height: 746px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -16);
+}
+#guid_9989cab8_2af8_4506_afec_42ac748c5be5 {
+  width: 65px;
+  height: 39px;
+  transform-origin: 50% 50%;
+  transform: matrix(-0.0523359552025795, 0.9986295104026794, -0.9986295104026794, -0.0523359552025795, 285.0000011331452, 734.9999718929835);
+}
+#guid_bcd0344b_3e0d_48b5_b0b3_15797599fd2e {
+  width: 76px;
+  height: 76px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 139, 712);
+}
+#guid_c91e6fa7_1a0a_4499_8b0b_38fe8e224a4d {
+  width: 71px;
+  height: 71px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 717);
+}
+#guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0 {
+  position: absolute;
+  width: 375px;
+  height: 800px;
+  background-color: #fff;
+}
+#guid_00035456_6f29_4446_82a8_c6899319bd58 {
+  width: 446px;
+  height: 917px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -34, -36);
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+#guid_56108e49_2a19_449f_96f5_7be17ad69bf1 {
+  width: 375px;
+  height: 743px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -13);
+}
+#guid_f7be5ba4_d429_42b8_8300_0c536d76d206 {
+  width: 65px;
+  height: 39px;
+  transform-origin: 50% 50%;
+  transform: matrix(-0.0523359552025795, 0.9986295104026794, -0.9986295104026794, -0.0523359552025795, 297.0000011331452, 734.9999718929835);
+}
+#guid_2adaa18f_d18f_467c_a923_d1f63d73d963 {
+  width: 71px;
+  height: 71px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 717);
+}
+#guid_c1550ae0_db0c_4c3a_bee6_59ed3f3b66ad {
+  width: 76px;
+  height: 76px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 139, 712);
+}
+#guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c {
+  position: absolute;
+  width: 375px;
+  height: 800px;
+  background-color: #fff;
+}
+#guid_506c3c8e_848b_489a_baca_791c46a51ed8 {
+  width: 446px;
+  height: 917px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -12, -58);
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+#guid_0fdd237a_c4e3_408a_aadb_f6f260af7fb5 {
+  width: 65px;
+  height: 39px;
+  transform-origin: 50% 50%;
+  transform: matrix(-0.0523359552025795, 0.9986295104026794, -0.9986295104026794, -0.0523359552025795, 290.0000011331452, 734.9999718929835);
+}
+#guid_10a7466b_c0b8_4823_bd28_4d28c1d3e91c {
+  width: 71px;
+  height: 71px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 717);
+}
+#guid_a8a02c81_b808_408e_b8e7_eb53cb6e24db {
+  width: 76px;
+  height: 76px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 139, 712);
+}
+#guid_d9e6bf8b_0e54_4bbe_9f84_6d2c52de2623 {
+  width: 375px;
+  height: 712px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 0);
+}
+#guid_85d62655_d526_4497_a5eb_1ee4b210fa4d {
+  position: absolute;
+  width: 375px;
+  height: 800px;
+  background-color: #fff;
+}
+#guid_7fc46624_4d3f_4d8d_bc5d_6e7a20441059 {
+  width: 446px;
+  height: 917px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -26, -58);
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+#guid_5b60362b_33bc_48f9_b014_8ea9d6a34a0b {
+  width: 375px;
+  height: 745px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -15);
+}
+#guid_15cc90f6_0719_4a65_bafd_776dfc2a3df3 {
+  width: 65px;
+  height: 39px;
+  transform-origin: 50% 50%;
+  transform: matrix(-0.0523359552025795, 0.9986295104026794, -0.9986295104026794, -0.0523359552025795, 290.0000011331452, 734.9999718929835);
+}
+#guid_081cc258_0ad7_4770_b1a3_9c2aefe653a3 {
+  width: 71px;
+  height: 71px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 717);
+}
+#guid_4803da04_d599_441c_b65e_8e6f9c8987f3 {
+  width: 76px;
+  height: 76px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 139, 712);
+}
+#guid_54535ee0_1f1d_4965_b2f5_6827537b6175 {
+  position: absolute;
+  width: 375px;
+  height: 800px;
+  background-color: #fff;
+}
+#guid_5c96d9ea_275d_425d_9d4c_d482ffd111ea {
+  width: 446px;
+  height: 917px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -16, -58);
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+#guid_63592777_4a9d_4386_9cfe_46dc4d81398b {
+  width: 65px;
+  height: 39px;
+  transform-origin: 50% 50%;
+  transform: matrix(-0.0523359552025795, 0.9986295104026794, -0.9986295104026794, -0.0523359552025795, 301.0000011331452, 734.9999718929835);
+}
+#guid_03fd760c_dc79_45df_8aec_4fca27d8b4a7 {
+  width: 71px;
+  height: 71px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 717);
+}
+#guid_077febc9_9ceb_493f_9d7a_bfa37b3994cf {
+  width: 76px;
+  height: 76px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 139, 712);
+}
+#guid_3e28da59_94bb_469d_a100_b487113b0150 {
+  width: 375px;
+  height: 721px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_ae53ae78_42f4_4560_bd4d_d7338166a159 {
+  position: absolute;
+  width: 375px;
+  height: 800px;
+  background-color: #fff;
+}
+#guid_c87d0c3a_2e2a_4d1f_a132_2714603ae97c {
+  width: 446px;
+  height: 917px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -20, -58);
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+#guid_260474e7_7e81_4bce_a3da_b29c59bd3fdf {
+  width: 375px;
+  height: 743px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -13);
+}
+#guid_3f7b9357_4741_4a2d_9140_b561c7af765c {
+  width: 65px;
+  height: 39px;
+  transform-origin: 50% 50%;
+  transform: matrix(-0.0523359552025795, 0.9986295104026794, -0.9986295104026794, -0.0523359552025795, 285.0000011331452, 734.9999718929835);
+}
+#guid_ab1d6f3c_e331_4149_ab2c_27e3b3814095 {
+  width: 76px;
+  height: 76px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 139, 712);
+}
+#guid_4d3e2f9f_0f4b_4a5d_a64e_4d522ee35d90 {
+  width: 71px;
+  height: 71px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 717);
+}
+#guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2 {
+  position: absolute;
+  width: 375px;
+  height: 800px;
+  background-color: #fff;
+}
+#guid_49b833ad_32c0_492a_ba2d_28357b3fae96 {
+  width: 446px;
+  height: 917px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -27, -58);
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+#guid_4b5cf6e4_5630_4282_a8da_0d486ccbb3d6 {
+  width: 375px;
+  height: 746px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -13);
+}
+#guid_29d09035_bfb8_4484_9274_362bf8b01271 {
+  width: 65px;
+  height: 39px;
+  transform-origin: 50% 50%;
+  transform: matrix(-0.0523359552025795, 0.9986295104026794, -0.9986295104026794, -0.0523359552025795, 295.0000011331452, 734.9999718929835);
+}
+#guid_451142b0_af95_4b86_bc2a_9cc4743b374d {
+  width: 76px;
+  height: 76px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 139, 712);
+}
+#guid_e9436add_e5b2_424f_b8f1_2a39929abf38 {
+  width: 71px;
+  height: 71px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 717);
+}
+#guid_68f095f6_8727_4401_be6e_7e9818c9308e {
+  position: absolute;
+  width: 375px;
+  height: 800px;
+  background-color: #fff;
+}
+#guid_b70b977e_4f63_424d_956b_3b8c1c2183c8 {
+  width: 446px;
+  height: 917px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -31, -58);
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+#guid_6e1a818d_ed9c_46c6_b6e6_71d402ef2c7e {
+  width: 76px;
+  height: 76px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 139, 712);
+}
+#guid_9769fc7c_1b78_49ba_9dee_8a4407f558c5 {
+  width: 71px;
+  height: 71px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 717);
+}
+#guid_72609e97_d1fa_4452_b8c3_a26f7f28e9ab {
+  width: 361px;
+  height: 712px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 0);
+}
+
+      
+
+  </style>
+
+  
+
+        <!-- /////////////////////// -->
+        <!-- Player -->
+        <div class="wrapper" style="position: relative; width: 100%; height: 100%;">
+          <div id="player" class="fusion--player" style="width: 100%; height: 100%; ">
+            <div class="fusion--viewport">
+            
+            
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_e3f1e73e_19d0_46a9_8d95_cff281735986">
+              <div class="fusion--scene--content">
+                
+<div id="guid_e3f1e73e_19d0_46a9_8d95_cff281735986" class="artboard scene" >
+<div id="guid_403002c6_292c_4c3a_a4e0_96c166975597" class="hero-element" >
+</div>
+<img id="guid_53210788_1f9c_4d8d_92cb_c26b6962d05e" class="hero-element" src="guid_53210788_1f9c_4d8d_92cb_c26b6962d05e.jpg" >
+
+<div id="guid_25691aae_ed44_4fad_af5a_69e7f8dc7f99" class="hero-element" >
+<div id="guid_6f523643_e9a0_495e_83ba_04c904d63a07" class="hero-element" >
+</div>
+<div id="guid_48620773_8fe0_4c26_9a35_f9d09cfd8c34" class="hero-element" hero-fx-magnet="{}" >Click here
+</div>
+</div>
+<div id="guid_0a740a9b_1c2f_43dd_86c4_0c4a7f5e4696" class="hero-element" >Welcome to the Telephone Directory 
+</div>
+<div id="guid_64039eff_4466_4678_b5e4_b36ffaf757e8" class="hero-element" hero-fx-magnet="{}" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -3.000000476837158px; top: -3px;">
+        <path id="guid_64039eff_4466_4678_b5e4_b36ffaf757e8-path" d="M 26.207 3 C 13.397 3 3.000 14.200 3.000 28 C 3.000 41.800 13.397 53 26.207 53 C 39.017 53 49.413 41.800 49.413 28 C 49.413 14.200 39.017 3 26.207 3 Z M 21.565 39.250 L 21.565 16.750 L 35.489 28 L 21.565 39.250 Z" fill="#3f45f1"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_9b439e8d_4512_4725_b375_7c085482d399">
+              <div class="fusion--scene--content">
+                
+<div id="guid_9b439e8d_4512_4725_b375_7c085482d399" class="artboard scene" >
+<div id="guid_da1a4fed_c37d_4b7b_a28a_d68bc70dfe0e" class="hero-element" >
+</div>
+<img id="guid_a46c9549_a0d7_4893_abba_d2f1d2833a2c" class="hero-element" src="guid_a46c9549_a0d7_4893_abba_d2f1d2833a2c.png" >
+
+<img id="guid_ff7f00cd_d80b_43ff_a6fb_91e338851633" class="hero-element" src="guid_ff7f00cd_d80b_43ff_a6fb_91e338851633.png" hero-fx-magnet="{}" >
+
+<img id="guid_4fc269b8_5b17_48ec_86c5_ecc09f452c33" class="hero-element" src="guid_4fc269b8_5b17_48ec_86c5_ecc09f452c33.png" hero-fx-magnet="{}" >
+
+<img id="guid_b1d0d34a_8677_4565_8c5c_c3d5326e2245" class="hero-element" src="guid_b1d0d34a_8677_4565_8c5c_c3d5326e2245.png" hero-fx-magnet="{}" >
+
+<img id="guid_babfccbb_5f06_4d9a_b677_cdbb9a4928bb" class="hero-element" src="guid_babfccbb_5f06_4d9a_b677_cdbb9a4928bb.png" hero-fx-magnet="{}" >
+
+<img id="guid_9c682ce4_60a1_477b_b06d_3e019ac040d7" class="hero-element" src="guid_9c682ce4_60a1_477b_b06d_3e019ac040d7.png" hero-fx-magnet="{}" >
+
+<img id="guid_ce743ed7_7701_4c4f_9684_2e3795c1f68e" class="hero-element" src="guid_ce743ed7_7701_4c4f_9684_2e3795c1f68e.png" hero-fx-magnet="{}" >
+
+<img id="guid_4c6526ec_4c8b_47fb_9401_e260e704e483" class="hero-element" src="guid_4c6526ec_4c8b_47fb_9401_e260e704e483.png" hero-fx-magnet="{}" >
+
+<img id="guid_7a7b4c69_d3f0_4289_a7f9_c0dc1a06f565" class="hero-element" src="guid_7a7b4c69_d3f0_4289_a7f9_c0dc1a06f565.png" hero-fx-magnet="{}" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_3c19e0b9_86cf_4bda_aeb1_b2b78721b3c9">
+              <div class="fusion--scene--content">
+                
+<div id="guid_3c19e0b9_86cf_4bda_aeb1_b2b78721b3c9" class="artboard scene" >
+<div id="guid_b76e09f6_6d98_4692_acd1_5f19ef8c0998" class="hero-element" >
+</div>
+<img id="guid_2b121295_c32e_4683_9bae_7e8394832a89" class="hero-element" src="guid_2b121295_c32e_4683_9bae_7e8394832a89.png" >
+
+<img id="guid_9989cab8_2af8_4506_afec_42ac748c5be5" class="hero-element" src="guid_9989cab8_2af8_4506_afec_42ac748c5be5.png" >
+
+<img id="guid_bcd0344b_3e0d_48b5_b0b3_15797599fd2e" class="hero-element" src="guid_bcd0344b_3e0d_48b5_b0b3_15797599fd2e.png" >
+
+<img id="guid_c91e6fa7_1a0a_4499_8b0b_38fe8e224a4d" class="hero-element" src="guid_c91e6fa7_1a0a_4499_8b0b_38fe8e224a4d.png" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0">
+              <div class="fusion--scene--content">
+                
+<div id="guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0" class="artboard scene" >
+<div id="guid_00035456_6f29_4446_82a8_c6899319bd58" class="hero-element" >
+</div>
+<img id="guid_56108e49_2a19_449f_96f5_7be17ad69bf1" class="hero-element" src="guid_56108e49_2a19_449f_96f5_7be17ad69bf1.png" >
+
+<img id="guid_f7be5ba4_d429_42b8_8300_0c536d76d206" class="hero-element" src="guid_f7be5ba4_d429_42b8_8300_0c536d76d206.png" >
+
+<img id="guid_2adaa18f_d18f_467c_a923_d1f63d73d963" class="hero-element" src="guid_2adaa18f_d18f_467c_a923_d1f63d73d963.png" >
+
+<img id="guid_c1550ae0_db0c_4c3a_bee6_59ed3f3b66ad" class="hero-element" src="guid_c1550ae0_db0c_4c3a_bee6_59ed3f3b66ad.png" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c">
+              <div class="fusion--scene--content">
+                
+<div id="guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c" class="artboard scene" >
+<div id="guid_506c3c8e_848b_489a_baca_791c46a51ed8" class="hero-element" >
+</div>
+<img id="guid_0fdd237a_c4e3_408a_aadb_f6f260af7fb5" class="hero-element" src="guid_0fdd237a_c4e3_408a_aadb_f6f260af7fb5.png" >
+
+<img id="guid_10a7466b_c0b8_4823_bd28_4d28c1d3e91c" class="hero-element" src="guid_10a7466b_c0b8_4823_bd28_4d28c1d3e91c.png" >
+
+<img id="guid_a8a02c81_b808_408e_b8e7_eb53cb6e24db" class="hero-element" src="guid_a8a02c81_b808_408e_b8e7_eb53cb6e24db.png" >
+
+<img id="guid_d9e6bf8b_0e54_4bbe_9f84_6d2c52de2623" class="hero-element" src="guid_d9e6bf8b_0e54_4bbe_9f84_6d2c52de2623.png" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_85d62655_d526_4497_a5eb_1ee4b210fa4d">
+              <div class="fusion--scene--content">
+                
+<div id="guid_85d62655_d526_4497_a5eb_1ee4b210fa4d" class="artboard scene" >
+<div id="guid_7fc46624_4d3f_4d8d_bc5d_6e7a20441059" class="hero-element" >
+</div>
+<img id="guid_5b60362b_33bc_48f9_b014_8ea9d6a34a0b" class="hero-element" src="guid_5b60362b_33bc_48f9_b014_8ea9d6a34a0b.png" >
+
+<img id="guid_15cc90f6_0719_4a65_bafd_776dfc2a3df3" class="hero-element" src="guid_15cc90f6_0719_4a65_bafd_776dfc2a3df3.png" >
+
+<img id="guid_081cc258_0ad7_4770_b1a3_9c2aefe653a3" class="hero-element" src="guid_081cc258_0ad7_4770_b1a3_9c2aefe653a3.png" >
+
+<img id="guid_4803da04_d599_441c_b65e_8e6f9c8987f3" class="hero-element" src="guid_4803da04_d599_441c_b65e_8e6f9c8987f3.png" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_54535ee0_1f1d_4965_b2f5_6827537b6175">
+              <div class="fusion--scene--content">
+                
+<div id="guid_54535ee0_1f1d_4965_b2f5_6827537b6175" class="artboard scene" >
+<div id="guid_5c96d9ea_275d_425d_9d4c_d482ffd111ea" class="hero-element" >
+</div>
+<img id="guid_63592777_4a9d_4386_9cfe_46dc4d81398b" class="hero-element" src="guid_63592777_4a9d_4386_9cfe_46dc4d81398b.png" >
+
+<img id="guid_03fd760c_dc79_45df_8aec_4fca27d8b4a7" class="hero-element" src="guid_03fd760c_dc79_45df_8aec_4fca27d8b4a7.png" >
+
+<img id="guid_077febc9_9ceb_493f_9d7a_bfa37b3994cf" class="hero-element" src="guid_077febc9_9ceb_493f_9d7a_bfa37b3994cf.png" >
+
+<img id="guid_3e28da59_94bb_469d_a100_b487113b0150" class="hero-element" src="guid_3e28da59_94bb_469d_a100_b487113b0150.png" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_ae53ae78_42f4_4560_bd4d_d7338166a159">
+              <div class="fusion--scene--content">
+                
+<div id="guid_ae53ae78_42f4_4560_bd4d_d7338166a159" class="artboard scene" >
+<div id="guid_c87d0c3a_2e2a_4d1f_a132_2714603ae97c" class="hero-element" >
+</div>
+<img id="guid_260474e7_7e81_4bce_a3da_b29c59bd3fdf" class="hero-element" src="guid_260474e7_7e81_4bce_a3da_b29c59bd3fdf.png" >
+
+<img id="guid_3f7b9357_4741_4a2d_9140_b561c7af765c" class="hero-element" src="guid_3f7b9357_4741_4a2d_9140_b561c7af765c.png" >
+
+<img id="guid_ab1d6f3c_e331_4149_ab2c_27e3b3814095" class="hero-element" src="guid_ab1d6f3c_e331_4149_ab2c_27e3b3814095.png" >
+
+<img id="guid_4d3e2f9f_0f4b_4a5d_a64e_4d522ee35d90" class="hero-element" src="guid_4d3e2f9f_0f4b_4a5d_a64e_4d522ee35d90.png" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2">
+              <div class="fusion--scene--content">
+                
+<div id="guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2" class="artboard scene" >
+<div id="guid_49b833ad_32c0_492a_ba2d_28357b3fae96" class="hero-element" >
+</div>
+<img id="guid_4b5cf6e4_5630_4282_a8da_0d486ccbb3d6" class="hero-element" src="guid_4b5cf6e4_5630_4282_a8da_0d486ccbb3d6.png" >
+
+<img id="guid_29d09035_bfb8_4484_9274_362bf8b01271" class="hero-element" src="guid_29d09035_bfb8_4484_9274_362bf8b01271.png" >
+
+<img id="guid_451142b0_af95_4b86_bc2a_9cc4743b374d" class="hero-element" src="guid_451142b0_af95_4b86_bc2a_9cc4743b374d.png" >
+
+<img id="guid_e9436add_e5b2_424f_b8f1_2a39929abf38" class="hero-element" src="guid_e9436add_e5b2_424f_b8f1_2a39929abf38.png" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_68f095f6_8727_4401_be6e_7e9818c9308e">
+              <div class="fusion--scene--content">
+                
+<div id="guid_68f095f6_8727_4401_be6e_7e9818c9308e" class="artboard scene" >
+<div id="guid_b70b977e_4f63_424d_956b_3b8c1c2183c8" class="hero-element" >
+</div>
+<img id="guid_6e1a818d_ed9c_46c6_b6e6_71d402ef2c7e" class="hero-element" src="guid_6e1a818d_ed9c_46c6_b6e6_71d402ef2c7e.png" >
+
+<img id="guid_9769fc7c_1b78_49ba_9dee_8a4407f558c5" class="hero-element" src="guid_9769fc7c_1b78_49ba_9dee_8a4407f558c5.png" >
+
+<img id="guid_72609e97_d1fa_4452_b8c3_a26f7f28e9ab" class="hero-element" src="guid_72609e97_d1fa_4452_b8c3_a26f7f28e9ab.png" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            </div>
+          </div>
+        </div>
+
+      
+
+
+  <!-- Hero/Fusion Player -->
+  <script>
+    
+      document.addEventListener('DOMContentLoaded', function () {
+        window.player = new fusion.Player({
+          id: 'player',
+          // debug: true, 
+          scenes: [
+            
+            { 
+              id: 'guid_e3f1e73e_19d0_46a9_8d95_cff281735986', 
+              type: 'flat', 
+              width: 375, 
+              height: 800,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_9b439e8d_4512_4725_b375_7c085482d399', 
+              type: 'flat', 
+              width: 375, 
+              height: 800,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_3c19e0b9_86cf_4bda_aeb1_b2b78721b3c9', 
+              type: 'flat', 
+              width: 375, 
+              height: 800,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0', 
+              type: 'flat', 
+              width: 375, 
+              height: 800,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c', 
+              type: 'flat', 
+              width: 375, 
+              height: 800,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_85d62655_d526_4497_a5eb_1ee4b210fa4d', 
+              type: 'flat', 
+              width: 375, 
+              height: 800,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_54535ee0_1f1d_4965_b2f5_6827537b6175', 
+              type: 'flat', 
+              width: 375, 
+              height: 800,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_ae53ae78_42f4_4560_bd4d_d7338166a159', 
+              type: 'flat', 
+              width: 375, 
+              height: 800,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2', 
+              type: 'flat', 
+              width: 375, 
+              height: 800,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_68f095f6_8727_4401_be6e_7e9818c9308e', 
+              type: 'flat', 
+              width: 375, 
+              height: 800,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+          ]
+        });
+        player.loadScene('guid_e3f1e73e_19d0_46a9_8d95_cff281735986');      
+      });
+    
+  </script>
+
+  <!-- Hero Scenes -->
+  <script>
+    
+      //---
+      // Scene: guid_e3f1e73e_19d0_46a9_8d95_cff281735986
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_e3f1e73e_19d0_46a9_8d95_cff281735986');          
+    
+            //---
+            // guid_48620773_8fe0_4c26_9a35_f9d09cfd8c34 : Interaction (tap)
+            document.getElementById('guid_48620773_8fe0_4c26_9a35_f9d09cfd8c34').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+            //---
+            // guid_64039eff_4466_4678_b5e4_b36ffaf757e8 : Interaction (tap)
+            document.getElementById('guid_64039eff_4466_4678_b5e4_b36ffaf757e8').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_9b439e8d_4512_4725_b375_7c085482d399
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_9b439e8d_4512_4725_b375_7c085482d399');          
+    
+            //---
+            // guid_ff7f00cd_d80b_43ff_a6fb_91e338851633 : Interaction (tap)
+            document.getElementById('guid_ff7f00cd_d80b_43ff_a6fb_91e338851633').addEventListener('click', function() { player.loadScene('guid_3c19e0b9_86cf_4bda_aeb1_b2b78721b3c9') });
+            
+            //---
+            // guid_4fc269b8_5b17_48ec_86c5_ecc09f452c33 : Interaction (tap)
+            document.getElementById('guid_4fc269b8_5b17_48ec_86c5_ecc09f452c33').addEventListener('click', function() { player.loadScene('guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0') });
+            
+            //---
+            // guid_b1d0d34a_8677_4565_8c5c_c3d5326e2245 : Interaction (tap)
+            document.getElementById('guid_b1d0d34a_8677_4565_8c5c_c3d5326e2245').addEventListener('click', function() { player.loadScene('guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c') });
+            
+            //---
+            // guid_babfccbb_5f06_4d9a_b677_cdbb9a4928bb : Interaction (tap)
+            document.getElementById('guid_babfccbb_5f06_4d9a_b677_cdbb9a4928bb').addEventListener('click', function() { player.loadScene('guid_85d62655_d526_4497_a5eb_1ee4b210fa4d') });
+            
+            //---
+            // guid_9c682ce4_60a1_477b_b06d_3e019ac040d7 : Interaction (tap)
+            document.getElementById('guid_9c682ce4_60a1_477b_b06d_3e019ac040d7').addEventListener('click', function() { player.loadScene('guid_54535ee0_1f1d_4965_b2f5_6827537b6175') });
+            
+            //---
+            // guid_ce743ed7_7701_4c4f_9684_2e3795c1f68e : Interaction (tap)
+            document.getElementById('guid_ce743ed7_7701_4c4f_9684_2e3795c1f68e').addEventListener('click', function() { player.loadScene('guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2') });
+            
+            //---
+            // guid_4c6526ec_4c8b_47fb_9401_e260e704e483 : Interaction (tap)
+            document.getElementById('guid_4c6526ec_4c8b_47fb_9401_e260e704e483').addEventListener('click', function() { player.loadScene('guid_68f095f6_8727_4401_be6e_7e9818c9308e') });
+            
+            //---
+            // guid_7a7b4c69_d3f0_4289_a7f9_c0dc1a06f565 : Interaction (tap)
+            document.getElementById('guid_7a7b4c69_d3f0_4289_a7f9_c0dc1a06f565').addEventListener('click', function() { player.loadScene('guid_ae53ae78_42f4_4560_bd4d_d7338166a159') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_3c19e0b9_86cf_4bda_aeb1_b2b78721b3c9
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_3c19e0b9_86cf_4bda_aeb1_b2b78721b3c9');          
+    
+            //---
+            // guid_2b121295_c32e_4683_9bae_7e8394832a89 : Interaction (tap)
+            document.getElementById('guid_2b121295_c32e_4683_9bae_7e8394832a89').addEventListener('click', function() { player.loadScene('guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0') });
+            
+            //---
+            // guid_9989cab8_2af8_4506_afec_42ac748c5be5 : Interaction (tap)
+            document.getElementById('guid_9989cab8_2af8_4506_afec_42ac748c5be5').addEventListener('click', function() { player.loadScene('guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0') });
+            
+            //---
+            // guid_bcd0344b_3e0d_48b5_b0b3_15797599fd2e : Interaction (tap)
+            document.getElementById('guid_bcd0344b_3e0d_48b5_b0b3_15797599fd2e').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+            //---
+            // guid_c91e6fa7_1a0a_4499_8b0b_38fe8e224a4d : Interaction (tap)
+            document.getElementById('guid_c91e6fa7_1a0a_4499_8b0b_38fe8e224a4d').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0');          
+    
+            //---
+            // guid_56108e49_2a19_449f_96f5_7be17ad69bf1 : Interaction (tap)
+            document.getElementById('guid_56108e49_2a19_449f_96f5_7be17ad69bf1').addEventListener('click', function() { player.loadScene('guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c') });
+            
+            //---
+            // guid_f7be5ba4_d429_42b8_8300_0c536d76d206 : Interaction (tap)
+            document.getElementById('guid_f7be5ba4_d429_42b8_8300_0c536d76d206').addEventListener('click', function() { player.loadScene('guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c') });
+            
+            //---
+            // guid_2adaa18f_d18f_467c_a923_d1f63d73d963 : Interaction (tap)
+            document.getElementById('guid_2adaa18f_d18f_467c_a923_d1f63d73d963').addEventListener('click', function() { player.loadScene('guid_3c19e0b9_86cf_4bda_aeb1_b2b78721b3c9') });
+            
+            //---
+            // guid_c1550ae0_db0c_4c3a_bee6_59ed3f3b66ad : Interaction (tap)
+            document.getElementById('guid_c1550ae0_db0c_4c3a_bee6_59ed3f3b66ad').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c');          
+    
+            //---
+            // guid_0fdd237a_c4e3_408a_aadb_f6f260af7fb5 : Interaction (tap)
+            document.getElementById('guid_0fdd237a_c4e3_408a_aadb_f6f260af7fb5').addEventListener('click', function() { player.loadScene('guid_85d62655_d526_4497_a5eb_1ee4b210fa4d') });
+            
+            //---
+            // guid_10a7466b_c0b8_4823_bd28_4d28c1d3e91c : Interaction (tap)
+            document.getElementById('guid_10a7466b_c0b8_4823_bd28_4d28c1d3e91c').addEventListener('click', function() { player.loadScene('guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0') });
+            
+            //---
+            // guid_a8a02c81_b808_408e_b8e7_eb53cb6e24db : Interaction (tap)
+            document.getElementById('guid_a8a02c81_b808_408e_b8e7_eb53cb6e24db').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_85d62655_d526_4497_a5eb_1ee4b210fa4d
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_85d62655_d526_4497_a5eb_1ee4b210fa4d');          
+    
+            //---
+            // guid_5b60362b_33bc_48f9_b014_8ea9d6a34a0b : Interaction (tap)
+            document.getElementById('guid_5b60362b_33bc_48f9_b014_8ea9d6a34a0b').addEventListener('click', function() { player.loadScene('guid_54535ee0_1f1d_4965_b2f5_6827537b6175') });
+            
+            //---
+            // guid_15cc90f6_0719_4a65_bafd_776dfc2a3df3 : Interaction (tap)
+            document.getElementById('guid_15cc90f6_0719_4a65_bafd_776dfc2a3df3').addEventListener('click', function() { player.loadScene('guid_54535ee0_1f1d_4965_b2f5_6827537b6175') });
+            
+            //---
+            // guid_081cc258_0ad7_4770_b1a3_9c2aefe653a3 : Interaction (tap)
+            document.getElementById('guid_081cc258_0ad7_4770_b1a3_9c2aefe653a3').addEventListener('click', function() { player.loadScene('guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c') });
+            
+            //---
+            // guid_4803da04_d599_441c_b65e_8e6f9c8987f3 : Interaction (tap)
+            document.getElementById('guid_4803da04_d599_441c_b65e_8e6f9c8987f3').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_54535ee0_1f1d_4965_b2f5_6827537b6175
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_54535ee0_1f1d_4965_b2f5_6827537b6175');          
+    
+            //---
+            // guid_63592777_4a9d_4386_9cfe_46dc4d81398b : Interaction (tap)
+            document.getElementById('guid_63592777_4a9d_4386_9cfe_46dc4d81398b').addEventListener('click', function() { player.loadScene('guid_ae53ae78_42f4_4560_bd4d_d7338166a159') });
+            
+            //---
+            // guid_03fd760c_dc79_45df_8aec_4fca27d8b4a7 : Interaction (tap)
+            document.getElementById('guid_03fd760c_dc79_45df_8aec_4fca27d8b4a7').addEventListener('click', function() { player.loadScene('guid_85d62655_d526_4497_a5eb_1ee4b210fa4d') });
+            
+            //---
+            // guid_077febc9_9ceb_493f_9d7a_bfa37b3994cf : Interaction (tap)
+            document.getElementById('guid_077febc9_9ceb_493f_9d7a_bfa37b3994cf').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_ae53ae78_42f4_4560_bd4d_d7338166a159
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_ae53ae78_42f4_4560_bd4d_d7338166a159');          
+    
+            //---
+            // guid_260474e7_7e81_4bce_a3da_b29c59bd3fdf : Interaction (tap)
+            document.getElementById('guid_260474e7_7e81_4bce_a3da_b29c59bd3fdf').addEventListener('click', function() { player.loadScene('guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2') });
+            
+            //---
+            // guid_3f7b9357_4741_4a2d_9140_b561c7af765c : Interaction (tap)
+            document.getElementById('guid_3f7b9357_4741_4a2d_9140_b561c7af765c').addEventListener('click', function() { player.loadScene('guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2') });
+            
+            //---
+            // guid_ab1d6f3c_e331_4149_ab2c_27e3b3814095 : Interaction (tap)
+            document.getElementById('guid_ab1d6f3c_e331_4149_ab2c_27e3b3814095').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+            //---
+            // guid_4d3e2f9f_0f4b_4a5d_a64e_4d522ee35d90 : Interaction (tap)
+            document.getElementById('guid_4d3e2f9f_0f4b_4a5d_a64e_4d522ee35d90').addEventListener('click', function() { player.loadScene('guid_54535ee0_1f1d_4965_b2f5_6827537b6175') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2');          
+    
+            //---
+            // guid_4b5cf6e4_5630_4282_a8da_0d486ccbb3d6 : Interaction (tap)
+            document.getElementById('guid_4b5cf6e4_5630_4282_a8da_0d486ccbb3d6').addEventListener('click', function() { player.loadScene('guid_68f095f6_8727_4401_be6e_7e9818c9308e') });
+            
+            //---
+            // guid_29d09035_bfb8_4484_9274_362bf8b01271 : Interaction (tap)
+            document.getElementById('guid_29d09035_bfb8_4484_9274_362bf8b01271').addEventListener('click', function() { player.loadScene('guid_68f095f6_8727_4401_be6e_7e9818c9308e') });
+            
+            //---
+            // guid_451142b0_af95_4b86_bc2a_9cc4743b374d : Interaction (tap)
+            document.getElementById('guid_451142b0_af95_4b86_bc2a_9cc4743b374d').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+            //---
+            // guid_e9436add_e5b2_424f_b8f1_2a39929abf38 : Interaction (tap)
+            document.getElementById('guid_e9436add_e5b2_424f_b8f1_2a39929abf38').addEventListener('click', function() { player.loadScene('guid_ae53ae78_42f4_4560_bd4d_d7338166a159') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_68f095f6_8727_4401_be6e_7e9818c9308e
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_68f095f6_8727_4401_be6e_7e9818c9308e');          
+    
+            //---
+            // guid_6e1a818d_ed9c_46c6_b6e6_71d402ef2c7e : Interaction (tap)
+            document.getElementById('guid_6e1a818d_ed9c_46c6_b6e6_71d402ef2c7e').addEventListener('click', function() { player.loadScene('guid_9b439e8d_4512_4725_b375_7c085482d399') });
+            
+            //---
+            // guid_9769fc7c_1b78_49ba_9dee_8a4407f558c5 : Interaction (tap)
+            document.getElementById('guid_9769fc7c_1b78_49ba_9dee_8a4407f558c5').addEventListener('click', function() { player.loadScene('guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2') });
+            
+        }, 1);
+      }); // Scene end    
+    
+  </script>
+
+  <!-- Hero Timelines -->
+  <script>
+    
+    //---
+    // Scene: guid_e3f1e73e_19d0_46a9_8d95_cff281735986
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_e3f1e73e_19d0_46a9_8d95_cff281735986');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_0a740a9b_1c2f_43dd_86c4_0c4a7f5e4696
+      var guid_0a740a9b_1c2f_43dd_86c4_0c4a7f5e4696_tl = function() {
+        var el = document.getElementById('guid_0a740a9b_1c2f_43dd_86c4_0c4a7f5e4696');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '174.000px 25.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {x: -40}, {x: 10, ease: Back.easeOut}), 0.8 ); 
+        tl.add( TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 1}), 1 );
+        return tl;
+      }
+      tl.add(guid_0a740a9b_1c2f_43dd_86c4_0c4a7f5e4696_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_9b439e8d_4512_4725_b375_7c085482d399
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_9b439e8d_4512_4725_b375_7c085482d399');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_3c19e0b9_86cf_4bda_aeb1_b2b78721b3c9
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_3c19e0b9_86cf_4bda_aeb1_b2b78721b3c9');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_068e2cd6_5ce6_4136_b4fb_9bf378c1f2e0');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_0f574c1e_1d66_4c78_bb32_1b9a5617c14c');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_85d62655_d526_4497_a5eb_1ee4b210fa4d
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_85d62655_d526_4497_a5eb_1ee4b210fa4d');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_54535ee0_1f1d_4965_b2f5_6827537b6175
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_54535ee0_1f1d_4965_b2f5_6827537b6175');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_ae53ae78_42f4_4560_bd4d_d7338166a159
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_ae53ae78_42f4_4560_bd4d_d7338166a159');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_0633a540_246c_4f09_ac2f_9c0650d6d4c2');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_68f095f6_8727_4401_be6e_7e9818c9308e
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_68f095f6_8727_4401_be6e_7e9818c9308e');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+  </script>
+
+  
+  
+</body>
+</html>
